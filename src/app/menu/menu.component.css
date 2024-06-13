@@ -1,0 +1,354 @@
+/* Estilos generales para la página */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed; /* Para asegurarse de que los elementos dentro de .background estén posicionados correctamente */
+  top: 0;
+  left: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(0, 61, 92);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right img {
+  width: 50px;
+  height: auto;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+
+.header-left span, .header-right span {
+  font-size: 1.5rem;
+}
+
+.menu-button {
+  background-color: rgba(0, 61, 92, 1);
+  border-color: #ccc;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+/* Estilos para la sección de bienvenida */
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('/assets/FondoSala.png');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box; /* Para asegurar que el padding no afecte el ancho */
+  margin: 0;
+  position: relative; /* Añadido para posicionar el cuadro blanco */
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Ocupa el 50% de la pantalla */
+  height: 48.2rem;
+  box-sizing: border-box; /* Para asegurar que el padding no afecte el ancho */
+}
+
+.welcome-text h2 {
+  font-size: 4rem;
+  color: #004080;
+  text-align: center;
+}
+
+.welcome-text p {
+  font-size: 1rem;
+  color: #333;
+  margin: 5rem;
+  font-size: 30px;
+}
+
+.welcome-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 65rem;
+}
+
+.welcome-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el menú lateral */
+.side-menu {
+  position: fixed;
+  top: 60px; /* Ajustado para estar debajo del encabezado */
+  right: -250px;
+  width: 250px;
+  height: calc(100% - 60px); /* Ajuste para que no cubra el encabezado */
+  transition: right 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.menu {
+  background-color: rgba(0, 61, 92, 0.9);
+  width: 100%;
+  max-width: 250px;
+  padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; /* Espacio debajo del encabezado del menú */
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-header h1 {
+  font-size: 1.5rem;
+  color: #f4f4f5;
+  margin: 0;
+}
+
+/* Estilos para el menú lateral */
+.side-menu {
+  position: fixed;
+  top: 60px; /* Ajustado para estar debajo del encabezado */
+  right: -250px;
+  width: 250px;
+  height: calc(100% - 60px); /* Ajuste para que no cubra el encabezado */
+  transition: right 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.menu {
+  background-color: rgba(0, 61, 92, 0.9);
+  width: 100%;
+  max-width: 250px;
+  padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; /* Espacio debajo del encabezado del menú */
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-header .menu-title {
+  font-size: 1.5rem;
+  color: #f4f4f5;
+  margin: 0;
+  margin-right: auto; /* Alinea el título a la izquierda */
+}
+
+/* Estilos para el menú lateral */
+.side-menu {
+  position: fixed;
+  top: 60px; /* Ajustado para estar debajo del encabezado */
+  right: -250px;
+  width: 250px;
+  height: calc(100% - 60px); /* Ajuste para que no cubra el encabezado */
+  transition: right 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.menu {
+  background-color: rgba(0, 61, 92, 0.9);
+  width: 100%;
+  max-width: 250px;
+  padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; /* Espacio debajo del encabezado del menú */
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-header .menu-title {
+  font-size: 1.5rem;
+  color: #f4f4f5;
+  margin: 0;
+}
+
+/* Estilos para el menú lateral */
+.side-menu {
+  position: fixed;
+  top: 60px; /* Ajustado para estar debajo del encabezado */
+  right: -250px;
+  width: 250px;
+  height: calc(100% - 60px); /* Ajuste para que no cubra el encabezado */
+  transition: right 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+.menu {
+  background-color: rgba(0, 61, 92, 0.9);
+  width: 100%;
+  max-width: 250px;
+  padding: 1rem;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 2% 0 2% 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; /* Espacio debajo del encabezado del menú */
+  border-bottom: 3px solid #fffdfd; /* Añade línea divisoria */
+}
+
+.menu-header .menu-title {
+  font-size: 1.5rem;
+  color: #f4f4f5;
+  text-align: center;
+  width: 100%;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Estilos para la lista del menú */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0; /* Eliminar el margen para que el fondo cubra todo el ancho */
+  border-bottom: 3px solid #fffdfd; /* Añade línea divisoria */
+  width: 100%; /* Asegura que el elemento <li> cubra todo el ancho */
+}
+
+li a {
+  display: block; /* Hace que el <a> cubra todo el <li> */
+  padding: 1rem; /* Añade padding para un mejor aspecto */
+  text-decoration: none;
+  color: #f4f4f5;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+li a:hover {
+  background-color: rgb(47, 56, 79);
+}
+
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #020202;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box; /* Para asegurar que el padding no afecte el ancho */
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+
+footer p {
+  margin: 0;
+}
